@@ -1,2 +1,2 @@
-# bot-tik-tok
-Time management bot (wrapper around Taskwarrior)
+# tik-tok
+Time management irc bot (wrapper around Taskwarrior)
