@@ -12,7 +12,7 @@ event irc_bot_addressed => sub {
     my ( $self, $nickstr, $channel, $msg ) = @_[ OBJECT, ARG0, ARG1, ARG2 ];
     my ($nick) = split /!/, $nickstr;
     return unless $nick eq 'perigrin';
-    my @response = split /\n/, capture_merged { system('task', $msg)  };
+    my @response = split /\n/, capture_merged { system("task $msg")  };
     $self->privmsg( $channel => $_ ) for @response;
 };
 
